@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "estates",
+  "info": {
+    "name": "Estates"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Rooms": {
+      "type": "integer"
+    },
+    "Area": {
+      "type": "decimal"
+    },
+    "Price": {
+      "type": "biginteger"
+    },
+    "Location": {
+      "type": "string"
+    },
+    "Photo": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
